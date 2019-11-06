@@ -1,0 +1,74 @@
+Q1 . 
+Try the statements below in REPL. 
+Please answer if they are correct or not and explain.
+
+a. 
+val id = 9527 
+Correct.
+This simply assign id with a value of 9527 and make it a Int type.
+
+b. 
+var number : Int = 5.6
+Incorrect. 
+number has a type Int, but the statement is trying to assign it with a float.
+
+c. 
+var title = "Hello Kotlin!"
+Correct.
+Here it simply assign title as a String type with a value of “”Hello Kotlin!
+
+d. 
+val content : String = null
+Incorrect.
+Only the nullable types can be set to null, such as String?
+
+e.
+val number : Double? = 556.6
+This is Correct.
+A nullable Double type can be assigned with a value with decimal number. 
+
+f. 
+var list: List<String>? = listOf (null, null)
+Incorrect.
+The “list” is a nullable List that contains non-nullable String type.
+However, here it is trying to assign “list” to a type of List<String?>.
+
+g. 
+var list: List<String?>? = listOf ("Wayne", "Chen")
+Correct.
+You can assign a List<String> to List<String?>? since “list” is a nullable that contains nullable elements.
+
+h. 
+list.size
+Depends on the type of list. 
+If the list is an optional type, then this is Incorrect. 
+If the list is not an optional type, then this is Correct.
+
+i. 
+list?.size
+Correct.
+Even if this statement assumes list is an optional List, but list?.size works for both nullable and non nullable types.
+
+
+Q2
+The code will print “Your grace”, because message has 39 characters and the statement 1..39 includes both ends of the chain.
+
+Q3
+The answer is d : val array = Array(6) { 1000.0.pow( it ) }
+The way the Array was initiated created 6 elements and each values are 1000 times the previous value, starting from 1000^0 = 1.
+
+The reasons why a - c are incorrect are as follows:
+
+a . 
+val array = new Array(6). 
+This is the incorrect way to initiate an Array in Kotlin. 
+
+b . 
+val array = { 100 }
+This is not the correct way to create an Array. Instead, this created a function that returns 100, as shown below :
+
+val array : () -> Int = {100}
+
+c. 
+val array = Array(6) { 1000.0.pow(10) }
+This will generate an Array of 6 elements but with the same values of 1000^10.
